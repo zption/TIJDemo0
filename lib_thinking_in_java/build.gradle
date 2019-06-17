@@ -1,0 +1,20 @@
+apply plugin: 'java-library'
+
+
+
+buildscript {
+    repositories {
+        maven { url 'https://mvnrepository.com/artifact/org.javassist/javassist' }
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation files('libs/apt-mirror-api-0.1.jar')
+    implementation files('libs/javassist-3.22.0-GA.jar')
+    // https://mvnrepository.com/artifact/org.javassist/javassist
+//    compile 'org.javassist:javassist:3.22.0-GA'
+}
+
+
+sourceCompatibility = "7"
+targetCompatibility = "7"

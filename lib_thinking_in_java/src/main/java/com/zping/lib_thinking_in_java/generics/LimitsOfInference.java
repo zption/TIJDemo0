@@ -1,0 +1,11 @@
+package com.zping.lib_thinking_in_java.generics;//: generics/LimitsOfInference.java
+import com.zping.lib_thinking_in_java.typeinfo.pets.*;
+import java.util.*;
+
+public class LimitsOfInference {
+  static void
+  f(Map<Person, List<? extends Pet>> petPeople) {}
+  public static void main(String[] args) {
+    // f(New.map()); // Does not compile
+  }
+} ///:~
