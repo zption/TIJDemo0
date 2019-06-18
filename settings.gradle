@@ -1,1 +1,1 @@
-include ':app', ':lib_thinking_in_java', ':lib_03_operator_shift'
+include ':app', ':lib_thinking_in_java', ':lib_03_operator_shift', ':lib_05_init_cleanup', ':lib_06_access'

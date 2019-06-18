@@ -10,6 +10,8 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/lib_03_operator_shift" />
+            <option value="$PROJECT_DIR$/lib_05_init_cleanup" />
+            <option value="$PROJECT_DIR$/lib_06_access" />
             <option value="$PROJECT_DIR$/lib_thinking_in_java" />
           </set>
         </option>
