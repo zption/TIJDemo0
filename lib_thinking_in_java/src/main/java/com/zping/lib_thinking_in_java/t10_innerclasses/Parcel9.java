@@ -15,6 +15,18 @@ public class Parcel9 {
         };
     }
 
+//    public static void test(final String string) {
+////        string = "nima";
+//        new Destination() {
+//            @Override
+//            public String readLabel() {
+//                return string = "wocao";
+//            }
+//        };
+//        System.out.println(string);
+//    }
+
+
     public static void main(String[] args) {
         Parcel9 p = new Parcel9();
         Destination d = p.destination("Tasmania");
