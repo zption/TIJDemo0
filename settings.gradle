@@ -1,1 +1,1 @@
-include ':app', ':lib_thinking_in_java', ':lib_03_operator_shift', ':lib_05_init_cleanup', ':lib_06_access', ':lib_07_reusing', ':lib_08_polymorphism', ':lib_09_interface', ':lib_10_inner_class', ':lib_11_holding'
+include ':app', ':lib_thinking_in_java', ':lib_03_operator_shift', ':lib_05_init_cleanup', ':lib_06_access', ':lib_07_reusing', ':lib_08_polymorphism', ':lib_09_interface', ':lib_10_inner_class', ':lib_11_holding', ':lib_12_exception'
