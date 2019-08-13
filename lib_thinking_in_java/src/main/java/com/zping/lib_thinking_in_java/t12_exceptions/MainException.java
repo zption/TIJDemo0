@@ -1,14 +1,15 @@
 package com.zping.lib_thinking_in_java.t12_exceptions;//: exceptions/MainException.java
-import java.io.*;
+
+import java.io.FileInputStream;
 
 public class MainException {
-  // Pass all exceptions to the console:
-  public static void main(String[] args) throws Exception {
-    // Open the file:
-    FileInputStream file =
-      new FileInputStream("MainException.java");
-    // Use the file ...
-    // Close the file:
-    file.close();
-  }
+    // Pass all exceptions to the console:
+    public static void main(String[] args) throws Exception {
+        // Open the file:
+        FileInputStream file =
+                new FileInputStream("MainException.java");
+        // Use the file ...
+        // Close the file:
+        file.close();
+    }
 } ///:~
