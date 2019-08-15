@@ -2,6 +2,8 @@ package com.zping.lib_thinking_in_java.t14_typeinfo;//: typeinfo/BoundedClassRef
 
 public class BoundedClassReferences {
   public static void main(String[] args) {
+//    Class<Number> numberClass = int.class;
+      Class<Integer> integerClass = int.class;
     Class<? extends Number> bounded = int.class;
     bounded = double.class;
     bounded = Number.class;

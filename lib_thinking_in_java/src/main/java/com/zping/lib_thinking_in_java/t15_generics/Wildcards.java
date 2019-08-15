@@ -50,7 +50,7 @@ public class Wildcards {
   void wildSupertype(Holder<? super T> holder, T arg) {
     holder.set(arg);
     // T t = holder.get();  // Error:
-    //   Incompatible types: found Object, required T
+      //   Incompatible getTypes: found Object, required T
 
     // OK, but type information has been lost:
     Object obj = holder.get();

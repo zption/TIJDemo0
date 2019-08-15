@@ -1,5 +1,5 @@
 //: generics/coffee/CoffeeGenerator.java
-// Generate different types of Coffee:
+// Generate different getTypes of Coffee:
 package com.zping.lib_thinking_in_java.t15_generics.coffee;
 
 import com.zping.lib_thinking_in_java.net.mindview.util.*;

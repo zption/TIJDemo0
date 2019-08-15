@@ -1,5 +1,5 @@
 package com.zping.lib_thinking_in_java.t03_operators;//: operators/AllOps.java
-// Tests all the operators on all the primitive data types
+// Tests all the operators on all the primitive data getTypes
 // to show which ones are accepted by the Java compiler.
 
 public class AllOps {

@@ -148,9 +148,9 @@
     </Match>
     <Match class="Holder">
         <BugCode name="EC"/>
-        <!--Call to equals() comparing different types in Holder.main(String[])  At Holder.java:[line 28]-->
-        <!--Call to equals() comparing different types in WildcardRules.f(Holder)  At WildcardRules.java:[line 11]-->
-        <!--Call to equals() comparing different types in WildcardRules.g(Holder)  At WildcardRules.java:[line 17]-->
+        <!--Call to equals() comparing different getTypes in Holder.main(String[])  At Holder.java:[line 28]-->
+        <!--Call to equals() comparing different getTypes in WildcardRules.f(Holder)  At WildcardRules.java:[line 11]-->
+        <!--Call to equals() comparing different getTypes in WildcardRules.g(Holder)  At WildcardRules.java:[line 17]-->
     </Match>
     <Match class="Holder">
         <BugCode name="HE"/>
@@ -404,8 +404,8 @@
     </Match>
     <Match class="WildcardRules">
         <BugCode name="EC"/>
-        <!--Call to equals() comparing different types in WildcardRules.f(Holder)  At WildcardRules.java:[line 11]-->
-        <!--Call to equals() comparing different types in WildcardRules.g(Holder)  At WildcardRules.java:[line 17]-->
+        <!--Call to equals() comparing different getTypes in WildcardRules.f(Holder)  At WildcardRules.java:[line 11]-->
+        <!--Call to equals() comparing different getTypes in WildcardRules.g(Holder)  At WildcardRules.java:[line 17]-->
     </Match>
     <Match class="Derived">
         <BugCode name="EC"/>
@@ -538,10 +538,10 @@
     </Match>
     <Match class="typeinfo.pets.ForNameCreator">
         <BugCode name="EI"/>
-        <!--typeinfo.pets.ForNameCreator.getTypes() may expose internal representation by returning typeinfo.pets.ForNameCreator.types  At unknown source line-->
+        <!--typeinfo.pets.ForNameCreator.getTypes() may expose internal representation by returning typeinfo.pets.ForNameCreator.getTypes  At unknown source line-->
     </Match>
     <Match class="typeinfo.pets.LiteralPetCreator">
         <BugCode name="EI"/>
-        <!--typeinfo.pets.LiteralPetCreator.getTypes() may expose internal representation by returning typeinfo.pets.LiteralPetCreator.types  At unknown source line-->
+        <!--typeinfo.pets.LiteralPetCreator.getTypes() may expose internal representation by returning typeinfo.pets.LiteralPetCreator.getTypes  At unknown source line-->
     </Match>
 </FindBugsFilter>

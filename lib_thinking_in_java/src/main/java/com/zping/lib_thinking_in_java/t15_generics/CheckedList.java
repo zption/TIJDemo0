@@ -24,7 +24,7 @@ public class CheckedList {
         } catch (Exception e) {
             System.out.println(e);
         }
-        // Derived types work fine:
+        // Derived getTypes work fine:
         List<Pet> pets = Collections.checkedList(
                 new ArrayList<Pet>(), Pet.class);
         pets.add(new Dog());

@@ -10,7 +10,7 @@ public class GenericWriting {
   static void f1() {
     writeExact(apples, new Apple());
     // writeExact(fruit, new Apple()); // Error:
-    // Incompatible types: found Fruit, required Apple
+      // Incompatible getTypes: found Fruit, required Apple
   }
   static <T> void
   writeWithWildcard(List<? super T> list, T item) {

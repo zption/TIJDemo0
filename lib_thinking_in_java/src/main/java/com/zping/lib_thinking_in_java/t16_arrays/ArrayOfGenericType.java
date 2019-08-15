@@ -1,5 +1,5 @@
 package com.zping.lib_thinking_in_java.t16_arrays;//: arrays/ArrayOfGenericType.java
-// Arrays of generic types won't compile.
+// Arrays of generic getTypes won't compile.
 
 public class ArrayOfGenericType<T> {
   T[] array; // OK

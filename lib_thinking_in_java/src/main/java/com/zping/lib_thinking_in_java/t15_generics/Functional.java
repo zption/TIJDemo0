@@ -4,7 +4,7 @@ import java.util.concurrent.atomic.*;
 import java.util.*;
 import static com.zping.lib_thinking_in_java.net.mindview.util.Print.*;
 
-// Different types of function objects:
+// Different getTypes of function objects:
 interface Combiner<T> { T combine(T x, T y); }
 interface UnaryFunction<R,T> { R function(T x); }
 interface Collector<T> extends UnaryFunction<T,T> {

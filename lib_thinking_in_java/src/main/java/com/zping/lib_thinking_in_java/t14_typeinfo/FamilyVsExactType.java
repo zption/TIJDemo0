@@ -1,32 +1,36 @@
 //: typeinfo/FamilyVsExactType.java
 // The difference between instanceof and class
 package com.zping.lib_thinking_in_java.t14_typeinfo;
-import static com.zping.lib_thinking_in_java.net.mindview.util.Print.*;
 
-class Base {}
-class Derived extends Base {}	
+import static com.zping.lib_thinking_in_java.net.mindview.util.Print.print;
+
+class Base {
+}
+
+class Derived extends Base {
+}
 
 public class FamilyVsExactType {
-  static void test(Object x) {
-    print("Testing x of type " + x.getClass());
-    print("x instanceof Base " + (x instanceof Base));
-    print("x instanceof Derived "+ (x instanceof Derived));
-    print("Base.isInstance(x) "+ Base.class.isInstance(x));
-    print("Derived.isInstance(x) " +
-      Derived.class.isInstance(x));
-    print("x.getClass() == Base.class " +
-      (x.getClass() == Base.class));
-    print("x.getClass() == Derived.class " +
-      (x.getClass() == Derived.class));
-    print("x.getClass().equals(Base.class)) "+
-      (x.getClass().equals(Base.class)));
-    print("x.getClass().equals(Derived.class)) " +
-      (x.getClass().equals(Derived.class)));
-  }
-  public static void main(String[] args) {
-    test(new Base());
-    test(new Derived());
-  }	
+    static void test(Object x) {
+        print("Testing x of type " + x.getClass());
+        print("x instanceof Base " + (x instanceof Base));
+        print("x instanceof Derived " + (x instanceof Derived));
+        print("Base.isInstance(x) " + Base.class.isInstance(x));
+        print("Derived.isInstance(x) " + Derived.class.isInstance(x));
+        print("x.getClass() == Base.class " + (x.getClass() == Base.class));
+        print("x.getClass() == Derived.class " + (x.getClass() == Derived.class));
+        print("x.getClass().equals(Base.class)) " + (x.getClass().equals(Base.class)));
+        print("x.getClass().equals(Derived.class)) " + (x.getClass().equals(Derived.class)));
+        print("x.getClass().isAssignableFrom(Base.class) " + x.getClass().isAssignableFrom(Base.class));
+        print("x.getClass().isAssignableFrom(Derived.class) " + x.getClass().isAssignableFrom(Derived.class));
+    }
+
+    public static void main(String[] args) {
+        System.out.println("***************  new Base()  *****************");
+        test(new Base());
+        System.out.println("***************  new Derived()  *****************");
+        test(new Derived());
+    }
 } /* Output:
 Testing x of type class typeinfo.Base
 x instanceof Base true

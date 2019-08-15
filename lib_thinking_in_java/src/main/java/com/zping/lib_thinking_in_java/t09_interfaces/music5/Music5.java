@@ -72,7 +72,7 @@ class Woodwind extends Wind {
 }
 
 public class Music5 {
-    // Doesn't care about type, so new types
+    // Doesn't care about type, so new getTypes
     // added to the system still work right:
     static void tune(Instrument i) {
         // ...

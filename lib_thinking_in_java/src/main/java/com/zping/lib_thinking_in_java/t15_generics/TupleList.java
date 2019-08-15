@@ -1,5 +1,5 @@
 package com.zping.lib_thinking_in_java.t15_generics;//: generics/TupleList.java
-// Combining generic types to make complex generic types.
+// Combining generic getTypes to make complex generic getTypes.
 import java.util.*;
 import com.zping.lib_thinking_in_java.net.mindview.util.*;
 
