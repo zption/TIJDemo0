@@ -1,17 +1,20 @@
 package com.zping.lib_thinking_in_java.t16_arrays;//: arrays/TestGenerated.java
-import java.util.*;
-import com.zping.lib_thinking_in_java.net.mindview.util.*;
+
+import com.zping.lib_thinking_in_java.net.mindview.util.CountingGenerator;
+import com.zping.lib_thinking_in_java.net.mindview.util.Generated;
+
+import java.util.Arrays;
 
 public class TestGenerated {
-  public static void main(String[] args) {
-    Integer[] a = { 9, 8, 7, 6 };
-    System.out.println(Arrays.toString(a));
-    a = Generated.array(a,new CountingGenerator.Integer());
-    System.out.println(Arrays.toString(a));
-    Integer[] b = Generated.array(Integer.class,
-        new CountingGenerator.Integer(), 15);
-    System.out.println(Arrays.toString(b));
-  }
+    public static void main(String[] args) {
+        Integer[] a = {9, 8, 7, 6};
+        System.out.println(Arrays.toString(a));
+        a = Generated.array(a, new CountingGenerator.Integer());
+        System.out.println(Arrays.toString(a));
+        Integer[] b = Generated.array(Integer.class,
+                new CountingGenerator.Integer(), 15);
+        System.out.println(Arrays.toString(b));
+    }
 } /* Output:
 [9, 8, 7, 6]
 [0, 1, 2, 3]
