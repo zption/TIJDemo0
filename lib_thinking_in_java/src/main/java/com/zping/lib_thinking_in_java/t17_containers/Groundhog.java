@@ -2,9 +2,13 @@ package com.zping.lib_thinking_in_java.t17_containers;//: containers/Groundhog.j
 // Looks plausible, but doesn't work as a HashMap key.
 
 public class Groundhog {
-  protected int number;
-  public Groundhog(int n) { number = n; }
-  public String toString() {
-    return "Groundhog #" + number;
-  }
+    protected int number;
+
+    public Groundhog(int n) {
+        number = n;
+    }
+
+    public String toString() {
+        return "Groundhog #" + number;
+    }
 } ///:~
