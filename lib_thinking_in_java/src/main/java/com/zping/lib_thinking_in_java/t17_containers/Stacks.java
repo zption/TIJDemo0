@@ -15,33 +15,39 @@ enum Month {
 public class Stacks {
     public static void main(String[] args) {
         Stack<String> stack = new Stack<String>();
-        for (Month m : Month.values())
+        for (Month m : Month.values()) {
             stack.push(m.toString());
+        }
         print("stack = " + stack);
         // Treating a stack as a Vector:
         stack.addElement("The last line");
         print("element 5 = " + stack.elementAt(5));
         print("popping elements:");
-        while (!stack.empty())
+        while (!stack.empty()) {
             printnb(stack.pop() + " ");
+        }
 
         // Using a LinkedList as a Stack:
         LinkedList<String> lstack = new LinkedList<String>();
-        for (Month m : Month.values())
+        for (Month m : Month.values()) {
             lstack.addFirst(m.toString());
+        }
         print("lstack = " + lstack);
-        while (!lstack.isEmpty())
+        while (!lstack.isEmpty()) {
             printnb(lstack.removeFirst() + " ");
+        }
 
         // Using the Stack class from
         // the Holding Your Objects Chapter:
         com.zping.lib_thinking_in_java.net.mindview.util.Stack<String> stack2 =
                 new com.zping.lib_thinking_in_java.net.mindview.util.Stack<String>();
-        for (Month m : Month.values())
+        for (Month m : Month.values()) {
             stack2.push(m.toString());
+        }
         print("stack2 = " + stack2);
-        while (!stack2.empty())
+        while (!stack2.empty()) {
             printnb(stack2.pop() + " ");
+        }
 
     }
 } /* Output:

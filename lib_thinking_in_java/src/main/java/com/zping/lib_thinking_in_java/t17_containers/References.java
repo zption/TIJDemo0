@@ -27,48 +27,62 @@ class VeryBig {
 }
 
 public class References {
-    private static ReferenceQueue<VeryBig> rq =
+    private static ReferenceQueue<VeryBig> sVeryBigReferenceQueue =
             new ReferenceQueue<VeryBig>();
 
     public static void checkQueue() {
-        Reference<? extends VeryBig> inq = rq.poll();
-        if (inq != null)
+        Reference<? extends VeryBig> inq = sVeryBigReferenceQueue.poll();
+        if (inq != null) {
             System.out.println("In queue: " + inq.get());
+        }
     }
 
     public static void main(String[] args) {
-        int size = 10;
+        int size = 3;
         // Or, choose size via the command line:
-        if (args.length > 0)
+        if (args.length > 0) {
             size = new Integer(args[0]);
-        LinkedList<SoftReference<VeryBig>> sa =
-                new LinkedList<SoftReference<VeryBig>>();
+        }
+        LinkedList<SoftReference<VeryBig>> sa = new LinkedList<SoftReference<VeryBig>>();
         for (int i = 0; i < size; i++) {
-            sa.add(new SoftReference<VeryBig>(
-                    new VeryBig("Soft " + i), rq));
-            System.out.println("Just created: " + sa.getLast());
+            VeryBig veryBig = new VeryBig("Soft " + i);
+            sa.add(new SoftReference<VeryBig>(veryBig, sVeryBigReferenceQueue));
+            System.out.println("Just created SoftReference: " + sa.getLast());
             checkQueue();
         }
         LinkedList<WeakReference<VeryBig>> wa =
                 new LinkedList<WeakReference<VeryBig>>();
         for (int i = 0; i < size; i++) {
-            wa.add(new WeakReference<VeryBig>(
-                    new VeryBig("Weak " + i), rq));
-            System.out.println("Just created: " + wa.getLast());
+            VeryBig veryBig = new VeryBig("Weak " + i);
+            wa.add(new WeakReference<VeryBig>(veryBig, sVeryBigReferenceQueue));
+            System.out.println("Just created WeakReference: " + wa.getLast());
             checkQueue();
         }
-        SoftReference<VeryBig> s =
-                new SoftReference<VeryBig>(new VeryBig("Soft"));
-        WeakReference<VeryBig> w =
-                new WeakReference<VeryBig>(new VeryBig("Weak"));
+        SoftReference<VeryBig> softReference = new SoftReference<VeryBig>(new VeryBig("Soft"));
+        System.out.println("Just created sssss: " + softReference);
+        WeakReference<VeryBig> weakReference = new WeakReference<VeryBig>(new VeryBig("Weak"));
+        System.out.println("Just created wwwww: " + weakReference);
+        System.out.println("************** System.gc() *************");
         System.gc();
-        LinkedList<PhantomReference<VeryBig>> pa =
-                new LinkedList<PhantomReference<VeryBig>>();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("************** checkQueue() begin *************");
+        checkQueue();
+        System.out.println("************** checkQueue() done *************");
+        LinkedList<PhantomReference<VeryBig>> pa = new LinkedList<PhantomReference<VeryBig>>();
         for (int i = 0; i < size; i++) {
             pa.add(new PhantomReference<VeryBig>(
-                    new VeryBig("Phantom " + i), rq));
-            System.out.println("Just created: " + pa.getLast());
+                    new VeryBig("Phantom " + i), sVeryBigReferenceQueue));
+            System.out.println("Just created  PhantomReference : " + pa.getLast());
             checkQueue();
+        }
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 } /* (Execute to see output) *///:~
