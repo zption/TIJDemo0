@@ -11,8 +11,7 @@ enum RoShamBo5 implements Competitor<RoShamBo5> {
       EnumMap<RoShamBo5,Outcome>>(RoShamBo5.class);
   static {
     for(RoShamBo5 it : RoShamBo5.values())
-      table.put(it,
-        new EnumMap<RoShamBo5,Outcome>(RoShamBo5.class));
+      table.put(it, new EnumMap<RoShamBo5, Outcome>(RoShamBo5.class));
     initRow(PAPER, DRAW, LOSE, WIN);
     initRow(SCISSORS, WIN, DRAW, LOSE);
     initRow(ROCK, LOSE, WIN, DRAW);
