@@ -1,8 +1,6 @@
 //: annotations/InterfaceExtractorProcessor.java
 // APT-based annotation processing.
-// {Exec: apt -factory
-// annotations.InterfaceExtractorProcessorFactory
-// Multiplier.java -s ../annotations}
+// {Exec: apt -factory annotations.InterfaceExtractorProcessorFactory Multiplier.java -s ../t20_annotations}
 package com.zping.lib_thinking_in_java.t20_annotations;
 
 import com.sun.mirror.apt.AnnotationProcessor;
@@ -16,22 +14,19 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-public class InterfaceExtractorProcessor
-        implements AnnotationProcessor {
+public class InterfaceExtractorProcessor implements AnnotationProcessor {
+
     private final AnnotationProcessorEnvironment env;
     private ArrayList<MethodDeclaration> interfaceMethods =
             new ArrayList<MethodDeclaration>();
 
-    public InterfaceExtractorProcessor(
-            AnnotationProcessorEnvironment env) {
+    public InterfaceExtractorProcessor(AnnotationProcessorEnvironment env) {
         this.env = env;
     }
 
     public void process() {
-        for (TypeDeclaration typeDecl :
-                env.getSpecifiedTypeDeclarations()) {
-            ExtractInterface annot =
-                    typeDecl.getAnnotation(ExtractInterface.class);
+        for (TypeDeclaration typeDecl : env.getSpecifiedTypeDeclarations()) {
+            ExtractInterface annot = typeDecl.getAnnotation(ExtractInterface.class);
             if (annot == null)
                 break;
             for (MethodDeclaration m : typeDecl.getMethods())

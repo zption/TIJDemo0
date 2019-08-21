@@ -3,6 +3,5 @@
 package com.zping.lib_thinking_in_java.t20_annotations.database;
 
 public @interface Uniqueness {
-  Constraints constraints()
-    default @Constraints(unique=true);
+    Constraints constraints() default @Constraints(unique = true);
 } ///:~
