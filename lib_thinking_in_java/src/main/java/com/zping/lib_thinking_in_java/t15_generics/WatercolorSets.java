@@ -6,15 +6,15 @@ import com.zping.lib_thinking_in_java.t15_generics.watercolors.Watercolors;
 import java.util.EnumSet;
 import java.util.Set;
 
-import static com.zping.lib_thinking_in_java.t15_generics.watercolors.Watercolors.BRILLIANT_RED;
-import static com.zping.lib_thinking_in_java.t15_generics.watercolors.Watercolors.BURNT_UMBER;
-import static com.zping.lib_thinking_in_java.t15_generics.watercolors.Watercolors.CERULEAN_BLUE_HUE;
-import static com.zping.lib_thinking_in_java.t15_generics.watercolors.Watercolors.VIRIDIAN_HUE;
 import static com.zping.lib_thinking_in_java.net.mindview.util.Print.print;
 import static com.zping.lib_thinking_in_java.net.mindview.util.Sets.complement;
 import static com.zping.lib_thinking_in_java.net.mindview.util.Sets.difference;
 import static com.zping.lib_thinking_in_java.net.mindview.util.Sets.intersection;
 import static com.zping.lib_thinking_in_java.net.mindview.util.Sets.union;
+import static com.zping.lib_thinking_in_java.t15_generics.watercolors.Watercolors.BRILLIANT_RED;
+import static com.zping.lib_thinking_in_java.t15_generics.watercolors.Watercolors.BURNT_UMBER;
+import static com.zping.lib_thinking_in_java.t15_generics.watercolors.Watercolors.CERULEAN_BLUE_HUE;
+import static com.zping.lib_thinking_in_java.t15_generics.watercolors.Watercolors.VIRIDIAN_HUE;
 //import static net.mindview.util.Sets.*;
 //import static generics.watercolors.Watercolors.*;
 

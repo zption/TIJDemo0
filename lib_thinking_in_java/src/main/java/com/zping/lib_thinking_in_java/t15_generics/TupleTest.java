@@ -1,6 +1,9 @@
 package com.zping.lib_thinking_in_java.t15_generics;//: generics/TupleTest.java
 
-import com.zping.lib_thinking_in_java.net.mindview.util.*;
+import com.zping.lib_thinking_in_java.net.mindview.util.FiveTuple;
+import com.zping.lib_thinking_in_java.net.mindview.util.FourTuple;
+import com.zping.lib_thinking_in_java.net.mindview.util.ThreeTuple;
+import com.zping.lib_thinking_in_java.net.mindview.util.TwoTuple;
 
 class Amphibian {
 }

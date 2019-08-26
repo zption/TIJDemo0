@@ -2,12 +2,12 @@
 // Generate different getTypes of Coffee:
 package com.zping.lib_thinking_in_java.t15_generics.coffee;
 
-import com.zping.lib_thinking_in_java.net.mindview.util.*;
+import com.zping.lib_thinking_in_java.net.mindview.util.Generator;
 
-import java.util.*;
+import java.util.Iterator;
+import java.util.Random;
 
-public class CoffeeGenerator
-        implements Generator<Coffee>, Iterable<Coffee> {
+public class CoffeeGenerator implements Generator<Coffee>, Iterable<Coffee> {
     private Class[] types = {Latte.class, Mocha.class,
             Cappuccino.class, Americano.class, Breve.class,};
     private static Random rand = new Random(47);
