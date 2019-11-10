@@ -14,8 +14,8 @@
 //      add(new Person(elements.get(i)));
 //  }
 //  public static void main(String[] args) throws Exception {
-//    People p = new People("People.xml");
-//    System.out.println(p);
+//    People mPair = new People("People.xml");
+//    System.out.println(mPair);
 //  }
 //} /* Output:
 //[Dr. Bunsen Honeydew, Gonzo The Great, Phillip J. Fry]

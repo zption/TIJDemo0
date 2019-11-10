@@ -8,7 +8,7 @@ public class ClassTest {
      * 2、Class.GetDeclaringClass
      * <doc>获取对应类的声明类Class对象</doc>
      * 3、两者的区别
-     * <p>
+     * <mPair>
      * GetEnclosingClass与GetDeclaringClass很相近
      * 两者的区别在于匿名内部类、getEnclosingClass对匿名内部类也有效
      */

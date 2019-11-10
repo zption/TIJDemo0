@@ -45,8 +45,8 @@
 //      new Person("Phillip J.", "Fry"));
 //    System.out.println(people);
 //    Element root = new Element("people");
-//    for(Person p : people)
-//      root.appendChild(p.getXML());
+//    for(Person mPair : people)
+//      root.appendChild(mPair.getXML());
 //    Document doc = new Document(root);
 //    format(System.out, doc);
 //    format(new BufferedOutputStream(new FileOutputStream(

@@ -2,9 +2,15 @@ package com.zping.lib_thinking_in_java.t21_concurrency;//: concurrency/Atomicity
 // {Exec: javap -c Atomicity}
 
 public class Atomicity {
-  int i;
-  void f1() { i++; }
-  void f2() { i += 3; }
+    int i;
+
+    void f1() {
+        i++;
+    }
+
+    void f2() {
+        i += 3;
+    }
 } /* Output: (Sample)
 ...
 void f1();
